@@ -4,10 +4,10 @@ const x = false;
 const o = true;
 
 const maze = [
+    [x, x, x, x, o],
     [x, x, x, x, x],
-    [x, o, x, o, x],
-    [o, o, x, o, x],
-    [x, o, o, o, x],
+    [o, o, o, o, x],
+    [x, x, x, o, x],
     [x, x, x, o, x],
 ];
 
@@ -16,7 +16,15 @@ const entry = {
     y: 2
 }
 
-console.log(pathFinder(maze, entry, "left"))
+const array = [
+    [x, x, x, x, x],
+    [o, o, o, o, x],
+    [x, x, x, o, x],
+]
+
+console.log(Number.isInteger(true))
+console.log(pathFinder(maze, entry))
+
 
 // pathFinder(maze, entry, "right")
 
