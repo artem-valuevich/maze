@@ -4,27 +4,19 @@ const x = false;
 const o = true;
 
 const maze = [
-    [x, x, x, x, o],
+    [x, o, o, o, o],
+    [o, o, o, o, o],
     [x, x, x, x, x],
-    [o, o, o, o, x],
-    [x, x, x, o, x],
-    [x, x, x, o, x],
+    [x, o, o, o, o],
+    [x, x, x, x, x],
 ];
 
 const entry = {
-    x: 0,
-    y: 2
+    x: 1,
+    y: 0
 }
-
-const array = [
-    [x, x, x, x, x],
-    [o, o, o, o, x],
-    [x, x, x, o, x],
-]
 
 console.log(pathFinder(maze, entry))
 
-
-// pathFinder(maze, entry, "right")
 
 

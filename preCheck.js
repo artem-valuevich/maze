@@ -1,15 +1,15 @@
-export default function(condition, maze) {
+export default function(maze) {
     for (let i = 0; i < maze.length; i++) {
         const line = maze[i];
 
         if (i===0 || i=== maze.length-1) { 
             for (let i = 0; i < line.length; i++)
-             {if(typeof line[i] === condition) return true;}
+             {if(line[i]) return true;}
         }
 
         else {
-            if(typeof line[0] === condition) return true;
-            if(typeof line[line.length-1] === condition) return true;
+            if(line[0]) return true;
+            if(line[line.length-1]) return true;
         }
     }
     return false;
