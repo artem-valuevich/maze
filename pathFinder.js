@@ -1,8 +1,18 @@
 import indexArray from "./indexArray.js"
+import preCheck from "./preCheck.js"
 
-export default function (maze, coordinates)
-{
-    maze = indexArray(maze, coordinates);
+export default function (maze, coordinates) {
+    const {x, y} = coordinates;
+
+    const entryExcluded = maze;
+    entryExcluded[y][x] = false;
+    console.log(entryExcluded);
+    console.log( preCheck("boolean", entryExcluded));
+
+    maze = indexArray(maze, coordinates)
+    entryExcluded[y][x] = false;
+    console.log(entryExcluded);
+    console.log( preCheck("number", maze));
     return maze;
 
 //     for (let i = 0; i < directions.length; i++) {

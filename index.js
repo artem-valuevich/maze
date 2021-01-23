@@ -22,7 +22,6 @@ const array = [
     [x, x, x, o, x],
 ]
 
-console.log(Number.isInteger(true))
 console.log(pathFinder(maze, entry))
 
 
