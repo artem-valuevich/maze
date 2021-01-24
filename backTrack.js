@@ -12,7 +12,7 @@ export default function backTrack(maze, {x, y}, path = []) {
         const direction = directions[i];
         if (direction.cell === CURRENT.cell - 1) {
               
-              backTrack(maze, direction.coordinates, path)
+              return backTrack(maze, direction.coordinates, path)
         } else {
             continue;
         }  

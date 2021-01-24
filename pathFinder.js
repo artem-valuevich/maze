@@ -13,7 +13,7 @@ export default function (maze, coordinates) {
     if (!preCheck(maze)) return "There's no exit points";
 
     maze = indexArray(maze, coordinates);
-
+    console.log(maze)
     const exit = findExitPoint(maze);
 
     if (!exit) return "There's no escape route"
