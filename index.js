@@ -4,15 +4,15 @@ const x = false;
 const o = true;
 
 const maze = [
-    [x, o, o, o, o],
-    [o, o, o, o, o],
-    [x, x, x, x, x],
-    [x, o, o, o, o],
-    [x, x, x, x, x],
+    [x, x, o, x, o],
+    [x, o, o, o, x],
+    [x, o, x, o, x],
+    [x, o, o, o, x],
+    [x, x, o, x, x],
 ];
 
 const entry = {
-    x: 1,
+    x: 2,
     y: 0
 }
 

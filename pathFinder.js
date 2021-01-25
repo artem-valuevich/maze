@@ -3,8 +3,7 @@ import preCheck from "./preCheck.js"
 import findExitPoint from "./findExitPoint.js"
 import backTrack from "./backTrack.js";
 
-export default function (maze, coordinates) {
-    const {x, y} = coordinates;
+export default function (maze, {x, y}) {
 
     if(!maze[y][x]) return "Invalid entry point";
     //нужно чтоб preCheck игнорил точку входа
@@ -12,7 +11,7 @@ export default function (maze, coordinates) {
 
     if (!preCheck(maze)) return "There's no exit points";
 
-    maze = indexArray(maze, coordinates);
+    maze = indexArray(maze, {x, y});
 
     const exit = findExitPoint(maze);
 
