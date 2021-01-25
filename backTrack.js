@@ -10,9 +10,8 @@ export default function backTrack(maze, {x, y}, path = []) {
     
     for (let i = 0; i < directions.length; i++) {
         const direction = directions[i];
-        if (direction.cell === CURRENT.cell - 1) {
-              
-              return backTrack(maze, direction.coordinates, path)
+        if (direction.cell === CURRENT.cell - 1) {  
+            return backTrack(maze, direction.coordinates, path)
         } else {
             continue;
         }  

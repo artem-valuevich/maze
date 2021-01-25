@@ -15,7 +15,11 @@ export default function(maze) {
                 x: 0, 
                 weight: line[0] 
             });
-            if(Number.isInteger(line[line.length-1])) arrayOfExits.push({y, x: line.length - 1, weight: line[line.length-1]});
+            if(Number.isInteger(line[line.length-1])) arrayOfExits.push({
+                y, 
+                x: line.length - 1, 
+                weight: line[line.length-1]
+            });
         }
     }
     arrayOfExits.sort((a, b) => a.weight - b.weight)
